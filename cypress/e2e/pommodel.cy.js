@@ -63,7 +63,7 @@ describe('Login Page Tests', () => {
 
       loginPage.clickForgetPassword()
       loginPage.enterRUsername('admin')
-      loginPage.ResetPassword()
+      loginPage.resetPassword()
       cy.contains('Reset Password link sent successfully')
 
 
@@ -71,7 +71,7 @@ describe('Login Page Tests', () => {
 
    it('Reset Password without Username', () => {
 
-      loginPage.ResetPassword()
+      loginPage.resetPassword()
       cy.contains('Reset Password link sent successfully')
 
    })
@@ -79,9 +79,34 @@ describe('Login Page Tests', () => {
    it('Verify Orange Inc link', () => {
 
       loginPage.clickOrangeInc()
-      cy.contains('Platform')
+
 
    })
+
+   it('Verify LinkedIn link', () => {
+
+      loginPage.clickLinkedIn()
+
+   })
+
+   it('Verify facebook link', () => {
+
+      loginPage.clickFacebook()
+
+   })
+
+   it('Verify twitter link', () => {
+
+      loginPage.clickTwitter()
+
+   })
+
+   it('Verify youtube link', () => {
+
+      loginPage.clickYoutube
+
+   })
+
 
 
 })
