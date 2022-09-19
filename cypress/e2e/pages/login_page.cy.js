@@ -5,7 +5,7 @@ export class LoginPage {
      pass_word = ':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input'
      log_in = '.oxd-button'
      forget_password = '.orangehrm-login-forgot > .oxd-text'
-     resetpsw_username = '.oxd-input'
+     reset_username = '.oxd-input'
      reset_password = '.oxd-button--secondary'
      orange_inc = ':nth-child(2) > a'
      linked_in = '[href="https://www.linkedin.com/company/orangehrm/mycompany/"] > .oxd-icon'
@@ -45,7 +45,7 @@ export class LoginPage {
 
      enterRUsername(rusername) {
 
-          cy.get(this.resetpsw_username).type(rusername)
+          cy.get(this.reset_password).type(rusername)
 
      }
 
