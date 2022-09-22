@@ -1,8 +1,8 @@
 
 export class LoginPage {
 
-     user_name = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-input'
-     pass_word = ':nth-child(3) > .oxd-input-group > :nth-child(2) > .oxd-input'
+     user_name = 'input[name=username]'
+     pass_word = 'input[name=password]'
      log_in = '.oxd-button'
      forget_password = '.orangehrm-login-forgot > .oxd-text'
      reset_username = '.oxd-input'
