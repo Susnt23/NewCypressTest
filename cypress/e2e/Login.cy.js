@@ -13,15 +13,14 @@ describe('Login Page Tests', () => {
 
    it('Login test with valid credntials', () => {
 
-
       loginPage.enterUsername('Admin')
       loginPage.enterPassword('admin123')
       loginPage.clickLogin()
       cy.get('.oxd-main-menu-search').click()
 
    })
+   
    it('Login test with invalid username', () => {
-
 
       loginPage.enterUsername('admin1')
       loginPage.enterPassword('Admin123')
@@ -30,9 +29,7 @@ describe('Login Page Tests', () => {
 
    })
 
-
    it('Login test with invalid password', () => {
-
 
       loginPage.enterUsername('admin')
       loginPage.enterPassword('Admin12345')
@@ -46,15 +43,12 @@ describe('Login Page Tests', () => {
       loginPage.clickLogin()
       cy.get('.oxd-main-menu-search').click()
 
-
    })
-
 
    it('Click forget Password', () => {
 
       loginPage.clickForgetPassword()
       cy.contains('Reset Password')
-
 
    })
 
@@ -65,7 +59,6 @@ describe('Login Page Tests', () => {
       loginPage.enterRUsername('admin')
       loginPage.resetPassword()
       cy.contains('Reset Password link sent successfully')
-
 
    })
 
@@ -79,7 +72,6 @@ describe('Login Page Tests', () => {
    it('Verify Orange Inc link', () => {
 
       loginPage.clickOrangeInc()
-
 
    })
 
@@ -106,7 +98,5 @@ describe('Login Page Tests', () => {
       loginPage.clickYoutube
 
    })
-
-
 
 })
