@@ -48,13 +48,12 @@ describe('Admin module Test', () => {
 
     })
 
-    it.only('Cancel Add New USer', () => {
+    it('Cancel Add New USer', () => {
 
         orghrmPage.clickAdmin()
         adminPage.clickAdd()
         adminPage.clickCancel()
 
     })
-
 
 })    
