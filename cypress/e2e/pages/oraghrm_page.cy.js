@@ -1,73 +1,57 @@
 export class Orghrmpage {
-
-
     admin_prof = '.oxd-main-menu-item:eq(0)'
     pim_info = '.oxd-main-menu-item:eq(1)'
     leave_list = '.oxd-main-menu-item:eq(2)'
     time_sheet = '.oxd-main-menu-item:eq(3)'
-    recruit_ment = '.oxd-main-menu-item:eq(4)'
+    recruitment = '.oxd-main-menu-item:eq(4)'
     my_info = '.oxd-main-menu-item:eq(5)'
-    perfor_mance = '.oxd-main-menu-item:eq(6)'
-    dash_board = '.oxd-main-menu-item:eq(7)'
-    direc_tory = '.oxd-main-menu-item:eq(8)'
-    mainte_nance = '.oxd-main-menu-item:eq(9)'
-    bu_zz = '.oxd-main-menu-item:eq(10)'
+    performance = '.oxd-main-menu-item:eq(6)'
+    dashboard = '.oxd-main-menu-item:eq(7)'
+    directory = '.oxd-main-menu-item:eq(8)'
+    maintenance = '.oxd-main-menu-item:eq(9)'
+    buzz = '.oxd-main-menu-item:eq(10)'
 
     clickAdmin() {
-
         cy.get(this.admin_prof).click()
-
     }
+
     clickPIM() {
-
         cy.get(this.pim_info).click()
-
     }
+
     clickLeave() {
-
         cy.get(this.leave_list).click()
-
     }
+
     clickTime() {
-
-        cy.get(this.time_sheet).click()
-
+        cy.get(this.timesheet).click()
     }
+
     clickRecruitment() {
-
-        cy.get(this.recruit_ment).click()
-
+        cy.get(this.recruitment).click()
     }
+
     clickMyInfo() {
-
         cy.get(this.my_info).click()
-
     }
+
     clickPerformance() {
-
-        cy.get(this.perfor_mance).click()
-
+        cy.get(this.performance).click()
     }
+
     clickDashboard() {
-
-        cy.get(this.dash_board).click()
-
+        cy.get(this.dashboard).click()
     }
+
     clickDirectory() {
-
-        cy.get(this.direc_tory).click()
-
+        cy.get(this.directory).click()
     }
+
     clickMaintain() {
-
-        cy.get(this.mainte_nance).click()
-
+        cy.get(this.maintenance).click()
     }
+
     clickBuzz() {
-
-        cy.get(this.bu_zz).click()
-
+        cy.get(this.buzz).click()
     }
-
-
 }
