@@ -1,5 +1,5 @@
 export class AdminPage {
-    user_name = '.oxd-input:eq(1)'
+    user_namea = '.oxd-input:eq(1)'
     employee_name = '.oxd-autocomplete-text-input > input'
     user_role = ':nth-child(2) > .oxd-input-group > :nth-child(2) > .oxd-select-wrapper > .oxd-select-text'
     select_role = '.oxd-select-dropdown > :eq(1)'
@@ -18,8 +18,8 @@ export class AdminPage {
     save_button = '.oxd-button--secondary'
     cancel_button = '.oxd-button--ghost'
 
-    enterUser(username) {
-        cy.get(this.user_name).type(username)
+    enterUser(usernamea) {
+        cy.get(this.user_namea).type(usernamea)
     }
 
     enterEmpName(empname) {
@@ -50,8 +50,8 @@ export class AdminPage {
         cy.get(this.click_add).click()
     }
 
-    newEmpname(empname) {
-        cy.get(this.employee_name).type(empname)
+    newEmpname(empnamea) {
+        cy.get(this.employee_name).type(empnamea)
     }
 
     newEmpUsername(empuser) {
