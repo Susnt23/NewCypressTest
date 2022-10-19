@@ -3,7 +3,7 @@ import { LoginPage } from "./pages/login_page.cy";
 const loginPage = new LoginPage()
 
 before(function () {
-   cy.fixture('example').then(function (data) {
+   cy.fixture('credential').then(function (data) {
       globalThis.data = data
    })
 })

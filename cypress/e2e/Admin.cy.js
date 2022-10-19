@@ -7,7 +7,7 @@ const orghrmPage = new Orghrmpage()
 const adminPage = new AdminPage()
 
 before(function () {
-    cy.fixture('example').then(function (data) {
+    cy.fixture('credential').then(function (data) {
         globalThis.data = data
     })
 })
