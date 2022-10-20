@@ -1,6 +1,6 @@
 export class LoginPage {
-     user_name = 'input[name=username]'
-     pass_word = 'input[name=password]'
+     username = 'input[name=username]'
+     password = 'input[name=password]'
      log_in = '.oxd-button'
      forget_password = '.orangehrm-login-forgot > .oxd-text'
      reset_username = '.oxd-input'
@@ -12,11 +12,11 @@ export class LoginPage {
      youtube = '[href="https://www.youtube.com/c/OrangeHRMInc"] > .oxd-icon > g > .st0'
 
      enterUsername(username) {
-          cy.get(this.user_name).type(username)
+          cy.get(this.username).type(username)
      }
 
      enterPassword(password) {
-          cy.get(this.pass_word).type(password)
+          cy.get(this.password).type(password)
      }
 
      clickLogin() {
@@ -32,7 +32,7 @@ export class LoginPage {
      }
 
      enterRUsername(rusername) {
-          cy.get(this.reset_password).type(rusername)
+          cy.get(this.reset_username).type(rusername)
      }
 
      clickOrangeInc() {

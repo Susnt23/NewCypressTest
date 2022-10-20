@@ -1,31 +1,43 @@
-
 import { LoginPage } from "./pages/login_page.cy";
 
 const loginPage = new LoginPage()
+
+before(function () {
+   cy.fixture('credential').then(function (data) {
+      globalThis.data = data
+   })
+})
 
 beforeEach(function () {
    cy.visit('https://opensource-demo.orangehrmlive.com')
 })
 
-describe('Login Page Tests', () => {
+context('Login Page Tests', () => {
 
-   it('Login test with valid credntials', () => {
-      loginPage.enterUsername('Admin')
-      loginPage.enterPassword('admin123')
+   it('Login test with valid credentials', () => {
+      loginPage.enterUsername(data.valid.username)
+      loginPage.enterPassword(data.valid.password)
       loginPage.clickLogin()
       cy.get('.oxd-main-menu-search').click()
    })
-   
+
    it('Login test with invalid username', () => {
-      loginPage.enterUsername('admin1')
-      loginPage.enterPassword('Admin123')
+      loginPage.enterUsername(data.invaliduser.username)
+      loginPage.enterPassword(data.invaliduser.password)
       loginPage.clickLogin()
       cy.get('.oxd-main-menu-search').click()
    })
 
-   it('Login test with invalid password', () => {
-      loginPage.enterUsername('admin')
-      loginPage.enterPassword('Admin12345')
+   it('Login test with invalid username ', () => {
+      loginPage.enterUsername(data.invalidpass.username)
+      loginPage.enterPassword(data.invalidpass.password)
+      loginPage.clickLogin()
+      cy.get('.oxd-main-menu-search').click()
+   })
+
+   it('Login test with invalid password and password', () => {
+      loginPage.enterUsername(data.invalid.username)
+      loginPage.enterPassword(data.invalid.password)
       loginPage.clickLogin()
       cy.get('.oxd-main-menu-search').click()
    })
@@ -40,9 +52,9 @@ describe('Login Page Tests', () => {
       cy.contains('Reset Password')
    })
 
-   it('Reset Password with Username', () => {
+   it.only('Reset Password with Username', () => {
       loginPage.clickForgetPassword()
-      loginPage.enterRUsername('admin')
+      loginPage.enterRUsername(data.reset.rusername)
       loginPage.resetPassword()
       cy.contains('Reset Password link sent successfully')
    })
