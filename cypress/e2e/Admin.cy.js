@@ -1,3 +1,4 @@
+/// <reference types ="Cypress"/>
 import { AdminPage } from './pages/admin_page.cy'
 import { LoginPage } from './pages/login_page.cy'
 import { Orghrmpage } from './pages/oraghrm_page.cy'
@@ -29,10 +30,9 @@ describe('Admin Module Test', () => {
         adminPage.enterStatus()
         adminPage.selectStatus()
         adminPage.clickSearch()
-        adminPage.clickAdd()
     })
 
-    it.only('Add New Users', () => {
+    it('Add New Users', () => {
         orghrmPage.clickAdmin()
         adminPage.clickAdd()
         adminPage.newEmpname(data.addemp.empnamea)
@@ -51,4 +51,33 @@ describe('Admin Module Test', () => {
         adminPage.clickAdd()
         adminPage.clickCancel()
     })
-})    
+
+    it('Open Job module', () => {
+        orghrmPage.clickAdmin()
+        adminPage.clickJob()
+        adminPage.openJobTitles()
+        adminPage.addNewJobTitle()
+        adminPage.typeJobName()
+        adminPage.typeDescp()
+        adminPage.uploadJob()
+        adminPage.saveJob()
+    })
+
+    it('Open Organization Information', () => {
+        orghrmPage.clickAdmin()
+        adminPage.openOrg()
+        adminPage.clickGeneralInfo()
+    })
+
+    it('Open Organization Information', () => {
+        orghrmPage.clickAdmin()
+        adminPage.openQualifications()
+        adminPage.openSkills()
+    })
+
+    it('Open More information', () => {
+        orghrmPage.clickAdmin()
+        adminPage.openMore()
+        adminPage.openNationalitites()
+    })
+})

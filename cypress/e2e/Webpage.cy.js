@@ -1,5 +1,5 @@
 import { LoginPage } from './pages/login_page.cy'
-import {Orghrmpage} from './pages/oraghrm_page.cy'
+import { Orghrmpage } from './pages/oraghrm_page.cy'
 
 const loginPage = new LoginPage()
 const orghrmPage = new Orghrmpage()
@@ -51,7 +51,7 @@ describe('Web Page Modules Test', () => {
 
    it('Dashboard Test', () => {
       orghrmPage.clickDashboard()
-      cy.contains('Launching Soon')
+      cy.contains('Time at Work')
    })
 
    it('Directory Test', () => {

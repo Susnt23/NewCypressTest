@@ -28,14 +28,14 @@ context('Login Page Tests', () => {
       cy.get('.oxd-main-menu-search').click()
    })
 
-   it('Login test with invalid username ', () => {
+   it('Login test with invalid password ', () => {
       loginPage.enterUsername(data.invalidpass.username)
       loginPage.enterPassword(data.invalidpass.password)
       loginPage.clickLogin()
       cy.get('.oxd-main-menu-search').click()
    })
 
-   it('Login test with invalid password and password', () => {
+   it('Login test with invalid username and invalid password', () => {
       loginPage.enterUsername(data.invalid.username)
       loginPage.enterPassword(data.invalid.password)
       loginPage.clickLogin()
@@ -52,7 +52,7 @@ context('Login Page Tests', () => {
       cy.contains('Reset Password')
    })
 
-   it.only('Reset Password with Username', () => {
+   it('Reset Password with Username', () => {
       loginPage.clickForgetPassword()
       loginPage.enterRUsername(data.reset.rusername)
       loginPage.resetPassword()
