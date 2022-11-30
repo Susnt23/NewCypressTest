@@ -24,7 +24,7 @@ export class Orghrmpage {
     }
 
     clickTime() {
-        cy.get(this.timesheet).click()
+        cy.get(this.time_sheet).click()
     }
 
     clickRecruitment() {
